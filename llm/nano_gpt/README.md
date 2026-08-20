@@ -11,8 +11,6 @@ embeddings, and PyTorch's fused attention when available.
 
 ## Quick start
 ```bash
-# optional: grab a corpus
-curl -O https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
 
 python train.py --data datasets/input.txt --iters 2000
 python sample.py --ckpt ckpt.pt --prompt "To be" --tokens 300
