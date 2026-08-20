@@ -11,7 +11,7 @@ dependencies). Because it operates on raw UTF-8 bytes, it can encode any string
 ## Quick start
 ```bash
 python tokenizer.py                      # runs a built-in self-test
-python train_tokenizer.py --data corpus.txt --vocab_size 1024 --out merges.txt
+python train_tokenizer.py --data datasets/corpus.txt --vocab_size 1024 --out datasets/merges.txt
 ```
 
 ```python

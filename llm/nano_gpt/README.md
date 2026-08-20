@@ -14,7 +14,7 @@ embeddings, and PyTorch's fused attention when available.
 # optional: grab a corpus
 curl -O https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
 
-python train.py --data input.txt --iters 2000
+python train.py --data datasets/input.txt --iters 2000
 python sample.py --ckpt ckpt.pt --prompt "To be" --tokens 300
 ```
 If `input.txt` is absent the script falls back to a small built-in sample so it
