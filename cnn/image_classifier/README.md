@@ -2,7 +2,7 @@
 
 A small, modern **CNN** for CIFAR-10-sized images: stacked Conv-BN-ReLU blocks,
 max-pooling, global average pooling, and a linear head. Batch-norm + GAP keep it
-compact (~1.2M params) and stable to train.
+compact (~1.25M params) and stable to train.
 
 ## Files
 - `model.py` — `ConvBlock` and `SimpleCNN`.
