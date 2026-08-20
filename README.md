@@ -9,12 +9,17 @@ learning and as reusable building blocks rather than as a heavyweight framework.
 ```
 ml-projects/
 ├── common/                    # shared helpers (seeding, device, param counts)
+├── datasets/                  # bundled corpus + downloader for training data
 ├── llm/
 │   ├── nano_gpt/              # decoder-only GPT: model, train, sample
 │   ├── bpe_tokenizer/         # byte-level BPE tokenizer (pure Python)
 │   ├── attention/             # attention from scratch (PyTorch + NumPy ref)
 │   ├── text_classifier/       # transformer-encoder classifier
 │   └── rag_mini/              # retrieval-augmented generation (pure NumPy)
+├── rnn/
+│   ├── cells_from_scratch/    # vanilla RNN & LSTM cells by hand (NumPy + torch)
+│   ├── char_rnn/              # char-level RNN/GRU/LSTM language model
+│   └── sequence_classifier/   # BiLSTM classifier
 └── cnn/
     ├── image_classifier/      # compact CNN for CIFAR-10
     ├── resnet/                # ResNet-18/34/50 from scratch
@@ -47,6 +52,7 @@ immediately:
 | `llm/bpe_tokenizer` | `python llm/bpe_tokenizer/tokenizer.py` |
 | `llm/attention` (NumPy ref) | `python llm/attention/reference_numpy.py` |
 | `llm/rag_mini` | `python llm/rag_mini/rag.py` |
+| `rnn/cells_from_scratch` | `python rnn/cells_from_scratch/numpy_cells.py` |
 | `cnn/augmentation` | `python cnn/augmentation/transforms.py` |
 
 The remaining projects require PyTorch (see `requirements.txt`).
@@ -56,6 +62,10 @@ The remaining projects require PyTorch (see `requirements.txt`).
 - The **attention** module is the core op behind `nano_gpt`, `text_classifier`,
   and the `vision_transformer`.
 - The **bpe_tokenizer** produces sub-word units to feed `nano_gpt`.
+- The **rnn** projects mirror their transformer cousins — `char_rnn` vs
+  `nano_gpt`, and `sequence_classifier` vs `text_classifier` — and share the same
+  corpus / synthetic task, so you can compare recurrent and attention-based
+  models directly.
 - The **vision_transformer** applies the same transformer machinery as the LLM
   projects to image patches — a natural bridge between the two halves.
 - The **augmentation** transforms feed the CNN training loops.
