@@ -1,0 +1,6 @@
+# Core deep-learning stack (needed by the PyTorch projects).
+torch>=2.0
+torchvision>=0.15
+
+# Numerics (used everywhere; the pure-NumPy projects need only this).
+numpy>=1.24

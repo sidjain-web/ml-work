@@ -1,0 +1,27 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data, checkpoints, logs
+data/
+*.pt
+*.pth
+*.ckpt
+merges.txt
+runs/
+*.log
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+.ipynb_checkpoints/
