@@ -1,6 +1,6 @@
 # ml-projects
 
-A monorepo of small, from-scratch **LLM** and **CNN** projects in Python. Each
+A monorepo of small, from-scratch **LLM**, **CNN** and **RNN** projects in Python. Each
 project is self-contained, readable, and runnable on its own — built for
 learning and as reusable building blocks rather than as a heavyweight framework.
 
