@@ -13,7 +13,7 @@ embeddings, and PyTorch's fused attention when available.
 ```bash
 
 python train.py --data datasets/input.txt --iters 2000
-python sample.py --ckpt ckpt.pt --prompt "To be" --tokens 300
+python sample.py --ckpt ckpt.pt --prompt "To be" --tokens 30
 ```
 If `input.txt` is absent the script falls back to a small built-in sample so it
 still runs end-to-end.
